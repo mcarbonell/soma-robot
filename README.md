@@ -16,6 +16,12 @@ Unlike conventional robotics that relies on power-hungry, continuous-compute mod
 3. **Cybernetic Plant Grounding:** Resolving the *Orphan Regulator* pathology of disembodied language models by anchoring cognitive representations to a physical plant with real, irreversible self-preservation stakes.
 4. **Solar REM Consolidation ("Dream Phase"):** Autonomous solar harvesting cycles ("pasturing") coupled with offline episodic memory distillation and policy tuning when solar irradiance yields an energy surplus.
 
+<p align="center">
+  <img src="assets/soma_robot_concept.jpg" alt="SOMA-Robot Physical Concept Render" width="100%">
+  <br>
+  <em>Figure 1: SOMA-Robot architectural concept — An indefinite-endurance terrestrial rover featuring dorsal monocrystalline PV arrays, continuous rubber tracks, sealed IP67 avionics hull, and sensor turret in solar pasturing stance.</em>
+</p>
+
 ---
 
 ## High-Level Cognitive Architecture
@@ -51,6 +57,42 @@ Unlike conventional robotics that relies on power-hungry, continuous-compute mod
 ═══════════════════════════════════════════════════════════════════════════
 ```
 
+### Operational Subsystem Dataflow & Homeostatic Veto Loop
+
+```mermaid
+flowchart TD
+    subgraph Environment ["Physical World & Environment"]
+        Sensors["Exteroceptive Sensors<br/>(LiDAR, Depth Cameras, Sonar)"]
+        Plant["Physical Plant & BMS<br/>(Battery SoC, Thermals, Motor Current)"]
+        Actuators["Motors & Tracks<br/>(Physical Actuation)"]
+    end
+
+    subgraph LowPower ["DOMAIN A: Always-On Autonomic Core (&lt;5W)"]
+        L0["<b>Level 0: Brainstem & Hypothalamus</b><br/>100Hz-1kHz Real-Time Control & Interoception"]
+        Reflex["<b>Hardwired Spinal Reflexes</b><br/>Instant Motor Cut-off"]
+        Veto{"<b>Homeostatic Veto</b><br/>Safety Envelope Violated?"}
+        Lm1["<b>Level -1: Cerebellum & MPC</b><br/>Kinematics & Trajectory Tracking"]
+    end
+
+    subgraph HighCompute ["DOMAIN B: Event-Driven Cognitive Core (Deep Sleep / 15-30W)"]
+        L1["<b>Level 1: Thalamus</b><br/>Feature Extraction & Attentional Gating"]
+        L2["<b>Level 2: Hippocampus</b><br/>Spatial SLAM, Vector Memory (L3/L4)"]
+        L3["<b>Level 3: Neocortex</b><br/>Local Edge SLM/LLM Reasoning"]
+    end
+
+    Sensors --> L1
+    Plant --> L0
+    L0 --> Reflex
+    Reflex -.->|Braking Cut-off| Actuators
+
+    L1 -- "Wake Interrupt / Telemetry" --> L3
+    L3 <-->|Query / Store| L2
+    L3 -- "Symbolic Action (JSON)" --> Veto
+    Veto -- "Approved" --> Lm1
+    Veto -- "VETO / Override" --> L0
+    Lm1 -->|PWM / Steering| Actuators
+```
+
 ---
 
 ## Repository Structure
@@ -58,6 +100,8 @@ Unlike conventional robotics that relies on power-hungry, continuous-compute mod
 ```text
 soma-robot/
 ├── README.md                           # Project manifesto and system overview
+├── assets/
+│   └── soma_robot_concept.jpg          # Physical platform concept render
 ├── docs/
 │   ├── 01_SYSTEM_ARCHITECTURE.md       # Full hardware, compute, and cognitive specification
 │   ├── 02_CYBERNETIC_HOMEOSTASIS.md     # Conant-Ashby loop, interoception, and drive dynamics
