@@ -101,8 +101,37 @@ When stationary under high solar irradiance with batteries above 80%, SOMA-Robot
 
 ---
 
-## Citation & Authorship
+## Author & Maintainer
 
 **Mario Raúl Carbonell Martínez**  
-*Valencia, Spain · 2026*  
-Project SOMA: *Structured Operative Memory and Autonomic Architecture*
+*Creator & System Architect · Project SOMA*  
+Valencia, Spain · 2026  
+
+[![GitHub](https://img.shields.io/badge/GitHub-mcarbonell-181717?style=flat&logo=github)](https://github.com/mcarbonell)
+[![Email](https://img.shields.io/badge/Email-marioraulcarbonell%40gmail.com-c5221f?style=flat&logo=gmail)](mailto:marioraulcarbonell@gmail.com)
+[![Project](https://img.shields.io/badge/Project-SOMA%20Protocol-orange)](https://github.com/mcarbonell/soma-robot)
+
+> For technical discussions, research inquiries, or collaboration on the SOMA architectural specifications, open an [Issue](https://github.com/mcarbonell/soma-robot/issues) or reach out directly at [marioraulcarbonell@gmail.com](mailto:marioraulcarbonell@gmail.com).
+
+---
+
+## Citation
+
+If you use SOMA-Robot architectural principles, schemas, or memory frameworks in your academic or applied research, please cite:
+
+```bibtex
+@misc{carbonell2026somarobot,
+  author       = {Carbonell Mart{\'i}nez, Mario Ra{\'u}l},
+  title        = {{SOMA-Robot: Autonomic Biomimetic Robotics via Homeostatic Regulation}},
+  year         = {2026},
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  howpublished = {\url{https://github.com/mcarbonell/soma-robot}}
+}
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
