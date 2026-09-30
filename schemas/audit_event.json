@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SOMA_Robot_AuditEvent",
+  "description": "Schema for the immutable, append-only flight recorder ledger stored in L4 memory.",
+  "type": "object",
+  "required": [
+    "sequence_id",
+    "timestamp_utc",
+    "event_type",
+    "previous_record_hash",
+    "payload",
+    "record_hash"
+  ],
+  "properties": {
+    "sequence_id": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "TELEMETRY_SNAPSHOT",
+        "EXECUTIVE_DECISION",
+        "AUTONOMIC_VETO_ASSERTED",
+        "HARDWARE_FAULT",
+        "REM_CONSOLIDATION_COMPLETED"
+      ]
+    },
+    "previous_record_hash": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "record_hash": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$",
+      "description": "SHA-256 hash computed over sequence_id, timestamp, event_type, previous_record_hash, and serialized payload."
+    }
+  }
+}
