@@ -101,15 +101,6 @@ When stationary under high solar irradiance with batteries above 80%, SOMA-Robot
 
 ---
 
-## Repository Metadata
-
-* **Repository Name:** `soma-robot`
-* **Short Description:** *Autonomic, indefinite-endurance robotics blueprint unifying biomimetic subsumption, cybernetic homeostasis, and the SOMA cognitive agent protocol.*
-* **Primary Topics / Tags:**  
-  `robotics` `autonomous-agents` `biomimetics` `cybernetics` `edge-ai` `homeostasis` `llm-agents` `soma` `solar-robot` `embodied-ai` `subsumption-architecture` `safety`
-
----
-
 ## Citation & Authorship
 
 **Mario Raúl Carbonell Martínez**  
