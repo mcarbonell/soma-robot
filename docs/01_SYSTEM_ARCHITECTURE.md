@@ -96,7 +96,9 @@ To prevent energy depletion during idle or monitoring phases, computation is str
 * **Frequency:** Asynchronous event updates (0.1 Hz – 5 Hz).
 * **Substrate:** Fast on-device vector DB (e.g., Qdrant / SQLite-VSS) + Topological Graph SLAM.
 * **Role:**
-  * **Topological Resource Map:** Graphs representing waypoints annotated with physical properties: terrain cost, solar exposure history, obstacle density.
+  * **Topological Resource Map & Tour Optimization:** Graphs representing waypoints annotated with physical properties (terrain cost, solar exposure history, obstacle density).
+    * **Multi-Waypoint Survey Planning (`k-Alternatives`):** Sequences scientific sampling waypoints and solar pasturing tours via bounded $k$-deviations over greedy distance/irradiance metrics, utilizing learned heuristic list ordering across diurnal cycles.
+    * **Dynamic Waypoint Insertion (`Ripple Insertion`):** Handles real-time adjustments (e.g., sudden discovery of unmapped solar patches or terrain blockages) by dynamically inserting/removing waypoints in $O(N \log N)$ ($<0.1\text{ ms}$), relaxing trajectory tension locally without recalculating the global route from scratch.
   * **Episodic RAG (SOMA L3/L4 Memory):** Stores key operational incidents formatted as semantic episodes: `Episode(ID, Context, Action, Outcome, EnergyDelta)`.
 
 ### Layer 3: Neocortex (Executive Planning & SOMA Sovereign Agent)

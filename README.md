@@ -38,6 +38,7 @@ Unlike conventional robotics that relies on power-hungry, continuous-compute mod
  LEVEL 2: HIPPOCAMPUS (Spatial & Episodic Memory)
  [Topological SLAM + Local Vector Store (RAG) + SOMA L3/L4 Memory]
  - Maintains metric/topological maps and historical event memories.
+ - Tour planning via k-Alternatives; sub-ms dynamic insertion via Ripple Insertion.
  - Records failure-modes: "Sloped terrain X caused track slip at 20% battery".
 ───────────────────────────────────────────────────────────────────────────
  LEVEL 1: THALAMUS (Sensory Filtering & Attentional Gating)
@@ -77,7 +78,7 @@ flowchart TD
 
     subgraph HighCompute ["DOMAIN B: Event-Driven Cognitive Core (Deep Sleep / 15-30W)"]
         L1["<b>Level 1: Thalamus</b><br/>Feature Extraction & Attentional Gating"]
-        L2["<b>Level 2: Hippocampus</b><br/>Spatial SLAM, Vector Memory (L3/L4)"]
+        L2["<b>Level 2: Hippocampus</b><br/>Spatial SLAM, Vector Memory (L3/L4)<br/>k-Alternatives &amp; Ripple Insertion"]
         L3["<b>Level 3: Neocortex</b><br/>Local Edge SLM/LLM Reasoning"]
     end
 
@@ -141,7 +142,7 @@ When stationary under high solar irradiance with batteries above 80%, SOMA-Robot
 * [**01. System Architecture**](docs/01_SYSTEM_ARCHITECTURE.md) — Comprehensive technical blueprint, dual-compute bus, and subsystem interfaces.
 * [**02. Cybernetic Homeostasis**](docs/02_CYBERNETIC_HOMEOSTASIS.md) — Mathematical and biological formalization of survival drives and the veto mechanism.
 * [**03. SOMA Protocol & Memory**](docs/03_SOMA_PROTOCOL_AND_MEMORY.md) — Strict JSON typing, L1–L4 memory architecture, and flight recorder telemetry.
-* [**04. Solar Consolidation Cycle**](docs/04_SOLAR_CONSOLIDATION_CYCLE.md) — Autonomous pasturing, energy management, and offline experience distillation.
+* [**04. Solar Consolidation Cycle**](docs/04_SOLAR_CONSOLIDATION_CYCLE.md) — Autonomous pasturing (k-Alternatives & Ripple Insertion TSP), energy management, and offline experience distillation.
 * [**05. Development Roadmap**](docs/05_DEVELOPMENT_ROADMAP.md) — Phased milestones from Python discrete simulation to physical rover deployment.
 
 ---

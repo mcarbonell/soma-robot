@@ -38,7 +38,9 @@ Conventional robots attempt to maintain constant compute and actuation until the
 
 ### 2.2 Pasture Mode ("Pastar")
 When the Energy Drive flags moderate depletion ($D_{\text{energy}} > 0.65$, corresponding to $\text{SoC} < 35\%$), the robot transitions into **Pasturing**:
-1. **Solar Gradient Tracking:** The robot queries the Hippocampal resource map for known high-irradiance clearings or tracks ambient light sensors to locate the nearest sunny patch.
+1. **Solar Gradient Tracking & Route Optimization:** The robot queries the Hippocampal resource map for known high-irradiance clearings.
+   * **Multi-Patch Tour Planning:** Uses the **k-Alternatives** algorithm to evaluate sequences of candidate solar basking patches against travel energy cost.
+   * **Real-Time Sunny Spot Insertion:** When ambient photodiodes detect an unmapped high-irradiance clearing mid-transit, **Ripple Insertion** dynamically splices the new coordinates into the active path in $<0.1\text{ ms}$ without resetting navigation state.
 2. **Optimal Solar Parking:** Once in the sunlight, the robot aligns its horizontal dorsal array directly perpendicular to the sun's azimuth/elevation (using chassis rotation or articulated solar panel tilt).
 3. **Deep System Power-Down:**
    * Motor inverters: Disconnected via hardware contactors.
