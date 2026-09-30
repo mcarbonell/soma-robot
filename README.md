@@ -4,6 +4,7 @@
 [![Architecture: Biomimetic Subsumption](https://img.shields.io/badge/Architecture-Biomimetic%20Subsumption-green.svg)](#system-architecture)
 [![Cognitive Engine: SOMA Protocol](https://img.shields.io/badge/Cognitive%20Engine-SOMA%20Protocol-orange.svg)](#the-soma-protocol)
 [![Status: Architectural Specification](https://img.shields.io/badge/Status-Architectural%20Blueprint-purple.svg)](#roadmap)
+[![Ethics: Peaceful & Scientific Research](https://img.shields.io/badge/Ethics-Peaceful%20%26%20Scientific-blueviolet.svg)](#ethical-considerations--dual-use-statement)
 
 > **"Every good regulator of a system must be a model of that system."**  
 > — Conant & Ashby (1970)
@@ -142,6 +143,24 @@ When stationary under high solar irradiance with batteries above 80%, SOMA-Robot
 * [**03. SOMA Protocol & Memory**](docs/03_SOMA_PROTOCOL_AND_MEMORY.md) — Strict JSON typing, L1–L4 memory architecture, and flight recorder telemetry.
 * [**04. Solar Consolidation Cycle**](docs/04_SOLAR_CONSOLIDATION_CYCLE.md) — Autonomous pasturing, energy management, and offline experience distillation.
 * [**05. Development Roadmap**](docs/05_DEVELOPMENT_ROADMAP.md) — Phased milestones from Python discrete simulation to physical rover deployment.
+
+---
+
+## Ethical Considerations & Dual-Use Statement
+
+While the SOMA-Robot architecture draws inspiration from biological survival and indefinite endurance, **the project is strictly committed to peaceful, civil, and scientific applications**.
+
+### 1. Intended Applications
+The design specifications, schemas, and control topologies published in this repository are intended exclusively for:
+* **Long-Term Environmental & Biodiversity Monitoring:** Non-intrusive wildlife tracking, flora mapping, and ecosystem surveying in remote or protected habitats.
+* **Precision Agriculture & Soil Regeneration:** Autonomous crop inspection, selective mechanical weeding, and localized soil moisture telemetry without heavy machinery footprint.
+* **Search and Rescue (SAR) & Humanitarian Operations:** Post-disaster reconnaissance, structural collapse survey, and hazard detection (toxic gas, radiation, thermal mapping) in areas hazardous to human personnel.
+* **Planetary & Extreme Environment Exploration:** Scientific analogues for persistent exploration in resource-constrained, communication-intermittent environments.
+
+### 2. Autonomous Weapons & Dual-Use Position
+Physical resilience and extreme energy endurance are inherently dual-use engineering domains. However, **this project explicitly opposes the weaponization of the SOMA-Robot architecture**:
+* SOMA-Robot does not incorporate, specify, or support kinetic payloads, targeting subsystems, or lethal autonomy.
+* The homeostatic veto mechanism formalized in this specification is designed strictly around **self-preservation and hardware preservation** within benign operational parameters, aligned with the principles of the [IEEE Global Initiative on Ethics of Autonomous and Intelligent Systems](https://ethicsinaction.ieee.org/) and the international robotics community's consensus against Lethal Autonomous Weapon Systems (LAWS).
 
 ---
 
