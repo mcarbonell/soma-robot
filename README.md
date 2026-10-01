@@ -18,9 +18,9 @@ Unlike conventional robotics that relies on power-hungry, continuous-compute mod
 4. **Solar REM Consolidation ("Dream Phase"):** Autonomous solar harvesting cycles ("pasturing") coupled with offline episodic memory distillation and policy tuning when solar irradiance yields an energy surplus.
 
 <p align="center">
-  <img src="assets/soma_robot_concept.jpg" alt="SOMA-Robot Physical Concept Render" width="100%">
+  <img src="assets/soma_robot_concept.jpg" alt="SOMA-Robot Physical Concept Illustration" width="100%">
   <br>
-  <em>Figure 1: SOMA-Robot architectural concept — An indefinite-endurance terrestrial rover featuring dorsal monocrystalline PV arrays, continuous rubber tracks, sealed IP67 avionics hull, and sensor turret in solar pasturing stance.</em>
+  <em>Figure 1: SOMA-Robot architectural concept — An indefinite-endurance terrestrial rover deployed in precision agriculture, featuring a dorsal monocrystalline PV deck, continuous rubber tracks, frontal sensor turret (LiDAR/stereo cameras), and dual robotic arms for autonomous harvesting.</em>
 </p>
 
 ---
@@ -103,7 +103,7 @@ flowchart TD
 soma-robot/
 ├── README.md                           # Project manifesto and system overview
 ├── assets/
-│   └── soma_robot_concept.jpg          # Physical platform concept render
+│   └── soma_robot_concept.jpg          # Physical platform concept illustration (agricultural deployment)
 ├── docs/
 │   ├── 01_SYSTEM_ARCHITECTURE.md       # Full hardware, compute, and cognitive specification
 │   ├── 02_CYBERNETIC_HOMEOSTASIS.md     # Conant-Ashby loop, interoception, and drive dynamics
