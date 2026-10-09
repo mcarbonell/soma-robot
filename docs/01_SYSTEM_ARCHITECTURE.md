@@ -45,7 +45,7 @@ To prevent energy depletion during idle or monitoring phases, computation is str
                                     │ SPI / High-Speed UART / CAN Bus
                                     ▼
 ┌────────────────────────────────────────────────────────────────────────┐
-│ DOMAIN B: EXECUTIVE COGNITIVE CORTEX (15–30W, Event-Driven / Sleep)   │
+│ DOMAIN B: EXECUTIVE COGNITIVE CORTEX (15–30W, Event-Driven / Sleep)    │
 │ Hardware: Ultra-low-power Edge NPU/GPU (NVIDIA Jetson Orin Nano,       │
 │           Hailo-8 accelerator, or AMD Embedded Ryzen / NPU)            │
 │ OS: Minimal Linux with real-time kernel patches (PREEMPT_RT)           │

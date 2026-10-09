@@ -20,7 +20,7 @@ The memory system prevents cognitive saturation by separating real-time sensory 
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│ L1: THALAMIC PERCEPTUAL SCRATCHPAD                                      │
+│ L1: THALAMIC PERCEPTUAL SCRATCHPAD                                     │
 │ Lifespan: 100 ms – 5 seconds (Volatile RAM)                            │
 │ Content: Immediate exteroceptive symbols (detected obstacles,          │
 │          current pitch/roll, instantaneous solar Watts, camera tokens).│

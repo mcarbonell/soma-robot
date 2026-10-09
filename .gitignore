@@ -1,0 +1,16 @@
+# Artefactos temporales
+*.tmp
+~$*
+
+# PDF exportados para envio
+*.pdf
+
+# Feedback
+docs/feedback*.md
+
+# Agentes
+.cursor/
+.kilo/
+.agent/
+.gemini/
+.vscode/
